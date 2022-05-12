@@ -74,9 +74,17 @@ public class VUtilities {
                 .id("geantyref")
                 .build();
 
+        final Library sqliteJdbc = Library.builder()
+                .groupId("org{}xerial")
+                .artifactId("sqlite-jdbc")
+                .version("3.15.1")
+                .id("sqlite-jdbc")
+                .build();
+
         libraryManager.addMavenCentral();
         libraryManager.loadLibrary(yaml);
         libraryManager.loadLibrary(confCore);
         libraryManager.loadLibrary(geantyref);
+        libraryManager.loadLibrary(sqliteJdbc);
     }
 }
