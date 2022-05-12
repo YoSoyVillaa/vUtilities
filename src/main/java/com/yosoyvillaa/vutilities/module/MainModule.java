@@ -48,5 +48,6 @@ public class MainModule extends AbstractModule {
                 .build();
 
         bind(MiniMessage.class).toInstance(miniMessage);
+        install(new StorageModule(path));
     }
 }
